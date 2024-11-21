@@ -1,0 +1,98 @@
+<div class="parent">
+    <app-header [pageTitle]="dashboardTitle" [additionalData]="someData"></app-header>
+    <app-nav-bar></app-nav-bar>
+  
+    <main class="main" id="main">
+      <div class="container-fluid">
+        <div class="content">
+          <div class="row justify-content-center my-5">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-4">Add Cancel Reasons</h4>
+                  <form [formGroup]="cancelForm" (ngSubmit)="onSubmit()">
+                    <!-- Service Icon -->
+                    <div class="mb-3">
+                        <label for="service_icon" class="form-label">Upload Image *</label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="service_icon"
+                          formControlName="service_icon"
+                          (change)="onFileChange($event)"
+                          accept="image/*"
+                          required
+                        />
+                      </div>
+                      
+                      <!-- Preview Uploaded Image -->
+                      <div *ngIf="imagePreview" class="image-preview mt-3">
+                        <img [src]="imagePreview" alt="image Image Preview" class="img-thumbnail" />
+                      </div>
+
+                    <!-- Canceled Reason -->
+                    <div class="mb-3">
+                      <label for="canceled_reason" class="form-label">Canceled Reason *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="canceled_reason"
+                        formControlName="canceled_reason"
+                        [(ngModel)]="canceled_reason"
+                        placeholder="Enter Canceled Reason"
+                        required
+                      />
+                    </div>
+  
+                    <!-- Sub Reason -->
+                    <div class="mb-3">
+                      <label for="sub_reason" class="form-label">Sub Reason *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="sub_reason"
+                        formControlName="sub_reason"
+                        [(ngModel)]="sub_reason"
+                        placeholder="Enter Sub Reason"
+                        required
+                      />
+                    </div>
+  <!-- Service List Selection -->
+                    <div class="mb-3">
+                      <label for="service_list" class="form-label">Select Service List *</label>
+                      <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Service List</mat-label>
+                        <mat-select formControlName="service_list" [(ngModel)]="service_list">
+                          <mat-option *ngFor="let service of services" [value]="service">
+                            {{ service }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+   <!-- Status -->
+   <div class="mb-3">
+    <label for="status" class="form-label">Status *</label>
+    <div class="d-flex gap-3">
+      <mat-radiogroup formControlName="status" [(ngModel)]="status">
+        <mat-radio-button value="active">Active</mat-radio-button>
+        <mat-radio-button value="in active">In Active</mat-radio-button>
+        
+      
+      </mat-radiogroup>
+    </div>
+  </div>
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-center mt-3">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+

@@ -1,0 +1,419 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+
+body {
+    margin: 0;
+    /* font-family: 'Barlow', sans-serif !important; */
+  }
+  
+  @font-face {
+    font-family: font-regular;
+    src: url(assets/fonts/font_regular.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: font-medium;
+    src: url(assets/fonts/font_medium.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: font-light;
+    src: url(assets/fonts/font_light.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: font-semi-bold;
+    src: url(assets/fonts/font_semi_bold.ttf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: font-bold;
+    src: url(assets/fonts/font_bold.ttf) format("opentype");
+  }
+  
+  
+  html, body { height: 100%; }
+  body { margin: 0;  font-family: 'Barlow', sans-serif !important; }
+  
+  html, body { height: 100%; }
+  body { margin: 0;  font-family: 'Barlow', sans-serif !important; }
+  
+  .custom-container .mat-dialog-container {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100% !important;  
+  }
+  
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-label {
+  font-weight: normal; /* Normal font weight for non-selected tabs */
+}
+
+.mat-tab-label-active {
+  font-weight: bold !important; /* Bold text for the active tab */
+  font-family: 'font-bold';
+  color: blue;
+}
+
+.mat-tab-group .mat-ink-bar {
+  height: 2px; /* Adjust the height of the indicator */
+  width: auto !important;
+}
+
+.mat-tab-group .mat-tab-label {
+  justify-content: center;
+  display: flex;
+}
+
+.mat-tab-group .mat-ink-bar {
+  width: auto; /* Ensures the indicator size is based on the text */
+}
+
+#main {
+  margin-left: 200px;
+  padding: 80px 20px;
+  width: calc(100% - 200px);
+}
+.toolbar-parent {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+
+
+@media only screen and (min-width:280px) and (max-width:479.98px) {
+  .fb.tsm.ml-2 {
+    display: none;
+  }
+  .header-type-image {
+    display: none;
+  }
+  .parent_main {
+    display: none;
+  }
+  #actions a {
+    text-decoration: none;
+  }
+  #main {
+    margin-left: 0px;
+    padding: 80px 5px;
+    width: 100%;
+  }
+  .mat-mdc-card.mdc-card[_ngcontent-ng-c4063878158] {
+   
+    margin-bottom: 20px;
+  }
+  .pai-chart{
+    background: #fff !important;
+    box-shadow: 1px 1px 0 0 #fff !important;
+    margin-bottom: 20px;
+  }
+  .pai-chart h5 {
+    padding: 10px;
+    font-size: 18px !important;
+  }
+  #pie-chart {
+    position: absolute;
+    left: -19%;
+  }
+  #actions {
+    display: inherit !important;
+    /* margin: auto; */
+  }
+  #actions {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 60px;
+    border-radius: 5px;
+    margin: 5px 0px;
+  }
+  #actions span {
+    /* margin: auto; */
+    font-size: 15px;
+    color: #00008a;
+    /* margin: 5px; */
+  }
+  #actions mat-icon {
+    color: #00008a;
+    margin-right: 5px;
+  }
+  .nav-item {
+    display: none;
+  }
+  /* #actions mat-icon {
+    margin: auto;
+  } */
+  .cp.header_img {
+    width: 150px !important;
+  }
+  .navbar-toggler-icon {
+    font-size: 13px !important;
+    color: #fff !important;
+  }
+  .round-chart h5{
+    font-size: 18px !important;
+  }
+  .pagetitle h3 {
+    font-size: 25px;
+  }
+  .main-card mat-card {
+    margin-bottom: 20px;
+  }
+  
+}
+@media only screen and (min-width:480px) and (max-width:575.98px) {
+  .fb.tsm.ml-2 {
+    display: none;
+  }
+  .vertical-line.mx-2 {
+    display: none;
+  }
+  .header-type-image {
+    display: none;
+  }
+  .parent_main {
+    display: none;
+  }
+  #main {
+    margin-left: 0px;
+    padding: 80px 5px;
+    width: 100%;
+  }
+  .mat-mdc-card.mdc-card[_ngcontent-ng-c4063878158] {
+   
+    margin-bottom: 20px;
+  }
+  .pai-chart{
+    background: #fff;
+    box-shadow: 1px 1px 0 0 #fff;
+    margin-bottom: 20px;
+  }
+  .pai-chart h5 {
+    padding: 10px;
+    font-size: 18px !important;
+  }
+  /* #pie-chart {
+    position: absolute;
+    left: -15%;
+  } */
+  #actions {
+    display: inherit !important;
+    /* margin: auto; */
+  }
+  #actions {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 160px;
+    border-radius: 5px;
+    margin: 10px 0px;
+  }
+  #actions span {
+    /* margin: auto; */
+    font-size: 15px;
+    color: #00008a;
+    /* margin: 5px; */
+  }
+  #actions mat-icon {
+    color: #00008a;
+    margin-right: 5px;
+  }
+  .nav-item {
+    display: none;
+  }
+  /* #actions mat-icon {
+    margin: auto;
+  } */
+  .cp.header_img {
+    width: 150px !important;
+  }
+  .navbar-toggler-icon {
+    font-size: 13px !important;
+    color: #fff !important;
+  }
+  .round-chart h5{
+    font-size: 18px !important;
+  }
+  .pagetitle h3 {
+    font-size: 25px;
+  }
+  .main-card mat-card {
+    margin-bottom: 20px;
+  }
+  #actions a {
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width:576px) and (max-width:767.98px) {
+  .fb.tsm.ml-2 {
+    display: none;
+  }
+  #actions a {
+    text-decoration: none;
+  }
+  .vertical-line.mx-2 {
+    display: none;
+  }
+  .header-type-image {
+    display: none;
+  }
+  .parent_main {
+    display: none;
+  }
+  #main {
+    margin-left: 0px;
+    padding: 80px 5px;
+    width: 100%;
+  }
+  .mat-mdc-card.mdc-card[_ngcontent-ng-c4063878158] {
+   
+    margin-bottom: 20px;
+  }
+  .pai-chart{
+    background: #fff;
+    box-shadow: 1px 1px 0 0 #fff;
+    margin-bottom: 20px;
+  }
+  .pai-chart h5 {
+    padding: 10px;
+    font-size: 18px !important;
+  }
+  
+  #actions {
+    display: inherit !important;
+    /* margin: auto; */
+  }
+  #actions {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 160px;
+    border-radius: 5px;
+    margin: 10px 0px;
+  }
+  #actions span {
+    /* margin: auto; */
+    font-size: 15px;
+    color: #00008a;
+    /* margin: 5px; */
+  }
+  #actions mat-icon {
+    color: #00008a;
+    margin-right: 5px;
+  }
+  .nav-item {
+    display: none;
+  }
+  /* #actions mat-icon {
+    margin: auto;
+  } */
+  .cp.header_img {
+    width: 150px !important;
+  }
+  .navbar-toggler-icon {
+    font-size: 13px !important;
+    color: #fff !important;
+  }
+  .round-chart h5{
+    font-size: 18px !important;
+  }
+  .pagetitle h3 {
+    font-size: 25px;
+  }
+  .main-card mat-card {
+    margin-bottom: 20px;
+  }
+  #actions a {
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:991.98px) {
+  .fb.tsm.ml-2 {
+    display: none;
+  }
+  #actions a {
+    text-decoration: none;
+  }
+  .vertical-line.mx-2 {
+    display: none;
+  }
+  .header-type-image {
+    display: none;
+  }
+  .parent_main {
+    display: none;
+  }
+  #main {
+    margin-left: 0px;
+    padding: 80px 5px;
+    width: 100%;
+  }
+  .mat-mdc-card.mdc-card[_ngcontent-ng-c4063878158] {
+   
+    margin-bottom: 20px;
+  }
+  .pai-chart{
+    background: #fff;
+    box-shadow: 1px 1px 0 0 #fff;
+    margin-bottom: 20px;
+  }
+  .pai-chart h5 {
+    padding: 10px;
+    font-size: 18px !important;
+  }
+  
+  #actions {
+    display: inherit !important;
+    /* margin: auto; */
+  }
+  #actions {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 160px;
+    border-radius: 5px;
+    margin: 10px 0px;
+  }
+  #actions span {
+    /* margin: auto; */
+    font-size: 15px;
+    color: #00008a;
+    /* margin: 5px; */
+  }
+  #actions mat-icon {
+    color: #00008a;
+    margin-right: 5px;
+  }
+  .nav-item {
+    display: none;
+  }
+  /* #actions mat-icon {
+    margin: auto;
+  } */
+  .cp.header_img {
+    width: 150px !important;
+  }
+  .navbar-toggler-icon {
+    font-size: 13px !important;
+    color: #fff !important;
+  }
+  .round-chart h5{
+    font-size: 18px !important;
+  }
+  .pagetitle h3 {
+    font-size: 25px;
+  }
+  .main-card mat-card {
+    margin-bottom: 20px;
+  }
+  #actions a {
+    text-decoration: none;
+  }
+}
+
+

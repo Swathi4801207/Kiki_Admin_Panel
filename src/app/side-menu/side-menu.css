@@ -1,0 +1,130 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* Style for the mat-nav-list to take full height */
+
+.parent {
+  position: fixed;
+  height: calc(100% - 50px); /* Reduce height for any margin or header space */
+  width: 225px; /* Increased width */
+  background-color: #00008a;
+  padding: 20px;
+  margin-top: 50px; /* Align with header */
+  overflow-y: auto;
+}
+
+.mat-nav-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.mat-list-item {
+  margin-bottom: 10px; /* Add spacing between items */
+}
+
+.parent a {
+  text-decoration: none;
+}
+.custom-text {
+  color: black;
+  
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  
+}
+.custom-text span {
+  font-size: 15px;
+  font-weight: bold;
+  color:#fff;
+}
+ .custom-text mat-icon {
+  margin-right: 6px;
+} 
+
+.nav-icon{
+  size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.bar-list-item,
+.bar-list-item-parent {
+  margin-top: 5px;
+  position: relative; /* Ensure relative positioning for absolute children */
+}
+mat-list-item.bar-list-item.selected {
+  background-color: white !important;
+}
+
+
+.selected {
+  width: auto;
+  background-color: #fff !important; /* Set your desired background color here */
+  border-radius: 5px !important;
+}
+
+.selected span{
+  color: black;
+  background-color: #fff !important;
+  padding: 10px;
+}
+.selected .nav-icon{
+  color: black !important;
+}
+.nav-icon{
+  color: #fff !important;
+}
+.bottom-image {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: -1; /* Ensures it's behind other content */
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.side-menu i {
+  font-size: 20px;
+  color: white;
+}
+
+.icon-fill {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(1000%) hue-rotate(190deg) brightness(100%) contrast(100%);
+}
+
+.icon-fill-white {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px;
+}
+
+.mat-icon.white-icon {
+  color: white;
+  fill: white;
+}
+span.mdc-list-item__content {
+  display:flex !important;
+} 
+  
+
+.mdc-list-item {
+  overflow: initial;
+}

@@ -1,0 +1,76 @@
+<div class="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-6">
+        <div class="main-hed middle">
+          <div class="main-para">
+            <i class="bi bi-stars"></i>
+            <h1>Hello</h1>
+            <h2>MYKWIK</h2>
+            <p>At Kwiku, we are committed to enhancing your user experience with intuitive navigation designed for your
+              convenience and satisfaction.</p>
+          </div>
+          <div class="hero-img">
+            <img src="/assets/hero-img.png" alt="">
+          </div>
+          <div class="links">
+            <a href="https://kwiku.in/contacts/" target="_blank" class="text-white FS">Contact Us /</a>
+            <a href="https://kwiku.in/privacy-policy/" target="_blank" class="text-white FS">Privacy Policy /</a>
+            <a href="https://kwiku.in/terms-and-conditions/" target="_blank" class="text-white FS">Support</a>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-4 col-md-6 ">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="main">
+            <div class="card-b">
+              <div class="px-4">
+                <div class="image" style="display: flex; justify-content: center">
+                  <img class="cp align-items-center" src="/assets/KWIKU_LOGO_Color.png" alt="logo"
+                    style="width: 50%; height: 45%; object-fit: contain" />
+                </div>
+                <div class="main-text">
+                  <h4>Welcome Back</h4>
+                  <p>Dont't have an account Creat a new account now it's Eree Takes less than a minute.</p>
+                </div>
+                <p class="fb mt-4 tb"></p>
+                <div class="row w-100">
+                  <div class="form-group">
+                    <label class="mt-1 fm FS" for="mobile_number">Mobile Number*</label>
+                    <input type="number" formControlName="mobile_number" class="form-control fm"
+                      placeholder="Enter Mobile..." />
+                    <div class="error-validator"
+                      *ngIf="loginForm.get('mobile_number')!.invalid && loginForm.get('mobile_number')!.touched">
+                      <div *ngIf="loginForm.get('mobile_number')!.errors?.['required']">
+                        Mobile Number is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="inputVisible" class="form-group mt-3">
+                    <label class=" fm FS" for="otp_str">Enter Otp*</label>
+                    <input type="number" formControlName="otp_str" class="form-control fm" />
+                    <div class="error-validator" *ngIf="loginForm.get('otp_str')!.invalid && loginForm.get('otp_str')!.touched">
+                      <div *ngIf="loginForm.get('otp_str')!.errors?.['required']">
+                        Mobile Number is required.
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn">{{btnText}}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+ </div>
+</div>
+
+  <div class="container">
+    <footer>
+  <div class="text-center">
+  <p class="mb-0">&copy; 2024 Designed &amp;Developed by <b style="color: black;">KIKU LOGISTICS PRIVATE LIMITED</b>.All rights reserved.</p>
+</div>
+</footer>
+
+</div>

@@ -1,0 +1,90 @@
+<div class="parent">
+    <app-header [pageTitle]="dashboardTitle" [additionalData]="someData"></app-header>
+    <app-nav-bar></app-nav-bar>
+  
+    <main class="main" id="main">
+      <div class="container-fluid">
+        <div class="content">
+          <div class="row justify-content-center my-5">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-4">Add Service</h4>
+                  <form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
+                    <!--  Name -->
+                    <div class="mb-3">
+                      <label for="name" class="form-label"> Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        formControlName="name"
+                        [(ngModel)]="name"
+                        placeholder="Enter name"
+                        required
+                      />
+                    </div>
+           
+              <!-- Type -->
+                    <div class="mb-3">
+                      <label for="employee" class="form-label">Type *</label>
+                      <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Type</mat-label>
+                        <mat-select formControlName="type" [(ngModel)]="type">
+                          <mat-option *ngFor="let typ of types" [value]="typ.id">
+                            {{ typ.name }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                     <!-- Priority -->
+                     <div class="mb-3">
+                        <label for="priority" class="form-label">Priority *</label>
+                        <mat-form-field appearance="fill" class="w-100">
+                          <mat-label>Priority</mat-label>
+                          <mat-select formControlName="priority" [(ngModel)]="priority">
+                            <mat-option *ngFor="let prior of priority" [value]="prior.id">
+                              {{ prior.name }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+
+                       <!-- Title -->
+                    <div class="mb-3">
+                        <label for="home_title" class="form-label">Home Title *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="home_title"
+                          formControlName="home_title"
+                          [(ngModel)]="home_title"
+                          placeholder="Enter title"
+                         
+                          required
+                        />
+                      </div>
+                       <!-- Status -->
+                      <div class="mb-3">
+                        <label for="gender" class="form-label">Status *</label>
+                             <div class="d-flex gap-3">
+                                <mat-radiogroup formControlName="status" [(ngModel)]="status">
+                                   <mat-radio-button value="active">Active</mat-radio-button>
+                                     <mat-radio-button value="inactive">In Active</mat-radio-button>
+                                     </mat-radiogroup>
+                                    </div>
+                                      </div>
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-center mt-3">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  

@@ -1,0 +1,46 @@
+<h1>{{ title }}</h1>
+<google-map
+  [height]="'250px'"
+  [width]="'100%'"
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="onMapClick($event)"
+  style="cursor: pointer"
+>
+  <map-marker
+    *ngIf="markerPosition"
+    [position]="markerPosition"
+    [label]="{ text: 'You are here!', color: 'black' }"
+  ></map-marker>
+</google-map>
+
+<div *ngIf="coordinates">
+  <!-- <p>Latitude: {{ coordinates.lat }}</p>
+  <p>Longitude: {{ coordinates.lng }}</p> -->
+
+  <div>
+    <div class="d-flex col-md-12">
+      <div class="form-group col-md-6 m-1">
+        <label class="mt-1 fm FS" for="mobile_number">Zone Name*</label>
+        <input class="form-control fm" placeholder="Enter Zone Name..." [(ngModel)]="zoneName" />
+      </div>
+
+      <div class="form-group col-md-6 m-1">
+        <label class="mt-1 fm FS" for="mobile_number">Zone Code*</label>
+        <input class="form-control fm" placeholder="Zone Code..." [(ngModel)]="postalCode" />
+      </div>
+    </div>
+
+    <div class="d-flex col-md-12">
+      <div class="form-group col-md-6 m-1">
+        <label class="mt-1 fm FS" for="mobile_number">City*</label>
+        <input class="form-control fm" placeholder="Enter City..." [(ngModel)]="city"/>
+      </div>
+
+      <div class="form-group col-md-6 m-1">
+        <label class="mt-1 fm FS" for="mobile_number">Radius In KM*</label>
+        <input  type="number"  class="form-control fm" placeholder="Enter Radius..." maxlength=1 />
+      </div>
+    </div>
+  </div>
+</div>

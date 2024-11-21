@@ -1,0 +1,124 @@
+<div class="parent">
+    <app-header [pageTitle]="dashboardTitle" [additionalData]="someData"></app-header>
+    <app-nav-bar></app-nav-bar>
+  
+    <main class="main" id="main">
+      <div class="container-fluid">
+        <div class="content">
+          <div class="row justify-content-center my-5">
+            <div class="col-lg-6 col-md-8 col-sm-12">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-4">Add Distance Base Fare</h4>
+                  <form [formGroup]="distancebaseFareForm" (ngSubmit)="onSubmit()">
+                    <!-- Select Base Fare -->
+                    <div class="mb-0">
+                      <label for="baseFare" class="form-label">Select Distance Base Fare *</label>
+                      <mat-form-field appearance="fill" class="w-100">
+                        <mat-label>Distance Base Fare</mat-label>
+                        <mat-select formControlName="distancebaseFare" [(ngModel)]="baseFare">
+                          <mat-option *ngFor="let fare of baseFare" [value]="fare.id">
+                            {{ fare.name }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+
+                     <!-- Per Km Rate -->
+                     <div class="mb-0">
+                        <label for="per_km_rate" class="form-label">Per Km Rate *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="per_km_rate"
+                          formControlName="per_km_rate"
+                       [(ngModel)]="perkmRate"
+                          placeholder="Enter Rate Per Km"
+                          required
+                        />
+                      </div>
+                      <!-- Per m Rate -->
+                      <div class="mb-0">
+                        <label for="per_m_rate" class="form-label">Per m Rate *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="per_m_rate"
+                          formControlName="per_km_rate"
+                     [(ngModel)]="permRate"
+                          placeholder="Enter Rate Per m"
+                          required
+                        />
+                      </div>
+  
+                    <!-- Up to KM -->
+                    <div class="mb-0">
+                      <label for="upToKm" class="form-label">Up to KM *</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="upToKm"
+                        formControlName="upToKm"
+                        [(ngModel)]="upto_km"
+                        placeholder="Enter distance in KM"
+                        required
+                      />
+                    </div>
+  
+                    <!-- Base Fare Amount -->
+                    <div class="mb-0">
+                      <label for="baseFareAmount" class="form-label">Base Fare Amount *</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="baseFareAmount"
+                        formControlName="baseFareAmount"
+                        [(ngModel)]="baseFareAmount"
+                        placeholder="Enter base fare amount"
+                        required
+                      />
+                    </div>
+  
+                    <!-- Platform Fee -->
+                    <div class="mb-0">
+                      <label for="platformFee" class="form-label">Platform Fee (%) *</label>
+                      <div class="input-group">
+                        <input
+                        type="number"
+                        class="form-control"
+                        id="platformFee"
+                        formControlName="platformFee"
+                        [(ngModel)]="platformFee"
+                        placeholder="Enter platform fee"
+                        required
+                      />
+                      <span class="input-group-text">%</span>
+                    </div>
+      </div>
+                    <!-- Icon Upload -->
+                    <!-- <div class="mb-3">
+                      <label for="icon" class="form-label">Upload Icon *</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="icon"
+                        (change)="onFileChange($event)"
+                        required
+                      />
+                    </div> -->
+  
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-center mt-4">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+

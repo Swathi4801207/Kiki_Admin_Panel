@@ -1,0 +1,149 @@
+<div class="parent">
+  <app-header [pageTitle]="dashboardTitle" [additionalData]="someData"></app-header>
+  <app-nav-bar></app-nav-bar>
+
+  <main class="main" id="main">
+    <div class="container-fluid">
+      <div class="main-card">
+        <div class="pagetitle">
+          <h3>Welcome,admin.</h3>
+        </div>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-3 ">
+            <mat-card class="card" id="sales1">
+              <div class="filters">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-cart-check"></i></a>
+              </div>
+              <mat-card-title class="ps-3"><h6>50</h6></mat-card-title>
+              <mat-card-content class="ps-3">
+                <p>Placed Orders</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-3">
+            <mat-card id="sales2">
+              <div class="filters">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-truck"></i></a>
+              </div>
+              <mat-card-title class="ps-3"><h6>30</h6></mat-card-title>
+              <mat-card-content class="ps-3">
+                <p>On Trip</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <!-- Card 3 -->
+         
+          <div class="col-md-3">
+            <mat-card id="sales3">
+              <div class="filters">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-compass"></i></a>
+              </div>
+              <mat-card-title class="ps-3"><h6>1000</h6></mat-card-title>
+              <mat-card-content class="ps-3">
+                <p>Completed</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <!-- Card 4 -->
+         
+          <div class="col-md-3">
+            <mat-card id="sales4">
+              <div class="filters">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-x-circle"></i></a>
+              </div>
+              <mat-card-title class="ps-3"><h6>500</h6></mat-card-title>
+              <mat-card-content class="ps-3">
+                <p>Cancelled</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div class="samurais">
+        <!-- <div class="container-fluid"> -->
+          <div class="main-card">
+          <div class="pagetitle">
+            <h2>Samurais</h2>
+          </div>
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3">
+              <mat-card class="card">
+                <div class="filters" id="icon1">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-person-lines-fill"></i></a>
+                </div>
+                <mat-card-title><h5>4000</h5></mat-card-title>
+                <mat-card-content>
+                  <p>Total</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="col-md-3">
+              <mat-card  class="card">
+                <div class="filters"  id="icon2">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-coin"></i></a>
+                </div>
+                <mat-card-title><h5>2000</h5></mat-card-title>
+                <mat-card-content>
+                  <p>Request</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-md-3">
+              <mat-card  class="card">
+                <div class="filters"  id="icon3">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-hand-thumbs-up"></i></a>
+                </div>
+                <mat-card-title><h5>2000</h5></mat-card-title>
+                <mat-card-content>
+                  <p>Approved</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="col-md-3">
+              <mat-card  class="card">
+                <div class="filters"  id="icon4">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-person-video3"></i></a>
+                </div>
+                <mat-card-title><h5>300</h5></mat-card-title>
+                <mat-card-content>
+                  <p>On Duty</p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+       <!-- </div> -->
+      </div>
+    </div>
+
+  
+  <div class="charts">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7">
+             <div class="pai-chart">
+              <h5>Zones Wise Booking</h5>
+              <div id="bar-chart"></div>
+             </div> 
+        </div>
+        <div class="col-md-5">
+          <div class="round-chart">
+            <h5>Samurais Leader Board</h5>
+            <div id="pie-chart"></div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </div>
+  </main>
+</div>

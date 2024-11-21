@@ -1,0 +1,290 @@
+
+
+.d-flex {
+  display: flex;
+}
+
+.mat-carfd {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.info-table {
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px;
+}
+
+.reason-field {
+  width: 97%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.item-header{
+  height: 55px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list-header {
+  padding: 15px;
+  font-family: "font-semi-bold";
+  width: 100%;
+}
+
+
+.header-content {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title-section { /* Allow the title and subtitle to take up available space */
+  padding-left: 10px; /* Add some space between the avatar and the text */
+}
+
+.menu-section {
+  display: flex;
+  align-items: center;
+}
+
+.mat-icon-button {
+  margin-left: auto; /* Push the more button to the right */
+}
+
+.circular-image {
+  display: flex;
+  justify-content: center;
+  width: 75px; /* Set the desired width */
+  height: 75px; /* Set the desired height */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Scale the image to fit the container */
+  border: 1px solid #ddd; /* Optional: Add a border */
+}
+.user-profile {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center-align items */
+}
+
+
+.user-title {
+  font-family: "font-bold";
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.user-sub-title {
+  font-family: "font-medium";
+  font-size: 12px;
+  color: #747474;
+  margin-bottom: 0px; /* Adjusted for better spacing */
+}
+
+.avatar {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-size: cover;
+  background-position: center;
+  height: 35px; /* Adjust height */
+  width: 35px; /* Adjust width */
+  border-radius: 50%; /* Circular shape */
+  background-color: lightgray; /* Fallback color */
+}
+
+.user-details {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.text-header {
+  color: #135eb4;
+  font-family: "font-semi-bold";
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.text-content {
+  color: black;
+  font-family: "font-bold";
+  font-size: 15px;
+  margin-top: -6px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.btn {
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+  font-family: "font-medium";
+  font-size: 13px;
+  position: relative;
+  letter-spacing: 0.05cap;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+.reject {
+  border-color: orange;
+  background-color: orange;
+  background: orange;
+}
+.reject:hover {
+  background-color: rgba(118, 99, 3, 0.816);
+  background: rgba(118, 99, 3, 0.816);
+  border-color: rgba(118, 99, 3, 0.816);
+}
+
+.accept {
+  border-color: #26ad32;
+  background-color: #26ad32;
+  background: #26ad32;
+}
+
+.accept:hover {
+  border-color: #0c7e16;
+  background-color: #0c7e16;
+  background: #0c7e16;
+}
+
+.save {
+  border-color: #0176ff;
+  background-color: #0176ff;
+  background: #0176ff;
+}
+
+.save:hover {
+  border-color: #0e498c;
+  background-color: #0e498c;
+  background: #0e498c;
+}
+
+.approve {
+  border-color: #ccc;
+  background-color: #ccc;
+  background: #ccc;
+}
+
+.input {
+  width: 97%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  font-family: "font-medium", sans-serif;
+}
+
+.bg-doc {
+  width: 230px;
+  height: 115px;
+  cursor: pointer;
+  background: linear-gradient(white, gray);
+  border-radius: 15px; /* Adjust for desired curvature */
+  position: relative; /* To position the image */
+  overflow: hidden; /* To clip the image if it's overflowing */
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* To maintain aspect ratio */
+  position: absolute; /* To layer the image */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the image is above the background */
+}
+
+
+.img-empty{
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust the height as needed */
+  text-align: center;
+  font-family: 'font-medium';
+  color: red;
+}
+
+.not-verified {
+  color: orange; /* Not Verified color */
+}
+
+.verified {
+  color: green; /* Verified color */
+}
+
+.rejected {
+  color: red; /* Rejected color */
+}
+
+.under-verification {
+  color: gray; /* Under Verification color */
+}
+
+/* Shimmer effect CSS */
+.shimmer {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    90deg,
+    #f6f7f8 0px,
+    #e9e9e9 40px,
+    #f6f7f8 80px
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.action-icons {
+  text-align: end;
+  flex: 1;
+}
+.action-icons i {
+  font-size: 20px;
+  padding: 15px;
+}

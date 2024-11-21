@@ -1,0 +1,25 @@
+.dialog-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+mat-dialog-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-dialog-actions {
+  margin-top: 10px;
+}
+.close-image {
+  margin: 10px;
+  display: flex;
+  justify-items: end;
+  justify-content: end;
+  align-items: end;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}

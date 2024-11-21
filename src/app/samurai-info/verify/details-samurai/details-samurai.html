@@ -1,0 +1,307 @@
+
+
+<div *ngIf="isLoading; else content">
+  <div class="shimmer" style="height: 20px; width: 100%; margin-bottom: 10px;"></div>
+  <div class="shimmer" style="height: 20px; width: 80%; margin-bottom: 10px;"></div>
+  <div class="shimmer" style="height: 20px; width: 70%;"></div>
+  <div class="shimmer" style="height: 20px; width: 60%;"></div>
+  <div class="shimmer" style="height: 20px; width: 50%;"></div>
+  <div class="shimmer" style="height: 20px; width: 40%;"></div>
+  <div class="shimmer" style="height: 20px; width: 30%;"></div>
+  <div class="shimmer" style="height: 20px; width: 20%;"></div>
+  <div class="shimmer" style="height: 20px; width: 10%;"></div>
+  <div class="shimmer" style="height: 20px; width: 50%;"></div>
+  <div class="shimmer" style="height: 20px; width: 60%;"></div>
+  <div class="shimmer" style="height: 20px; width: 70%;"></div>
+  <div class="shimmer" style="height: 20px; width: 80%;"></div>
+  <div class="shimmer" style="height: 20px; width: 90%;"></div>
+</div>
+<ng-template #content>
+<div class="item-header">
+  <div class="p-1">
+    <div class="user-profile">
+      <div
+        mat-card-avatar
+        class="avatar"
+        [ngStyle]="{'background-image': 'url(' + samuraiData?.profile_picture_url + ')'}"
+      ></div>
+
+      <div class="title-section">
+        <p class="user-title">{{samuraiData?.full_name}}</p>
+        <p class="user-sub-title">
+          {{samuraiData?.vehicle_type}} | 11:08 AM 22 Oct 2024
+        </p>
+       
+      </div>
+       <!-- Action Icons -->
+       <div class="action-icons">
+        <i class="bi bi-pencil-square edit-icon" (click)="onEdit()"></i>
+        <i class="bi bi-telephone-inbound" (click)="onCall()"></i>
+        <i class="bi bi-chat-dots" (click)="onChat()"></i>
+        <i class="bi bi-three-dots-vertical" (click)="onMore()"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-tab-group>
+  <mat-tab label="Details">
+    <div class="info-table">
+      <ul class="user-details">
+        <li *ngFor="let detail of userDetails" class="detail">
+          <p class="text-header">{{ detail.label }}</p>
+          <p class="text-content">{{ detail.value }}</p>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="vehicleInfo && licenceInfo && identityInfo &&samuraiData">
+      <div
+        *ngIf="vehicleInfo.document_status === 1 && licenceInfo.document_status === 1  && identityInfo.document_status === 1 && samuraiData.active === 0"
+      >
+        <div class="line"></div>
+        <div class="actions">
+          <button class="btn accept" (click)="approveAccount()">
+            Approve Account
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Vehicle Info">
+    <div class="info-table">
+      <ul class="user-details">
+        <li *ngFor="let detail of vehicleDetails" class="detail">
+          <p class="text-header">{{ detail.label }}</p>
+          <p class="text-content">{{ detail.value }}</p>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <div class="d-flex col-md-6">
+          <div>
+            <span class="text-header">RC - FRONT</span>
+
+            <div class="bg-doc m-1">
+              <img
+                (click)="openImageDialog(rcFront)"
+                *ngIf="rcFront"
+                [src]="rcFront"
+                alt="Description"
+                class="bg-image"
+              />
+
+              <div *ngIf="!rcFront" class="img-empty">
+                <!-- Content for the empty state -->
+                <p class="img-empty">No Document uploaded</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <span class="text-header">RC - BACK</span>
+          <div class="bg-doc m-1">
+            <img
+              (click)="openImageDialog(rcBack)"
+              *ngIf="rcBack"
+              [src]="rcBack"
+              alt="Description"
+              class="bg-image"
+            />
+
+            <div *ngIf="!rcBack" class="img-empty">
+              <!-- Content for the empty state -->
+              <p class="img-empty">No Document uploaded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="vehicleInfo">
+      <div *ngIf="vehicleInfo.document_status === 0">
+        <div class="line"></div>
+        <div class="actions">
+          <button
+            class="btn reject"
+            (click)="updateDocStatus(vehicleInfo.document_id, 0, rc_reason)"
+          >
+            Reject
+          </button>
+          <button
+            class="btn accept"
+            (click)="updateDocStatus(vehicleInfo.document_id, 1, rc_reason)"
+          >
+            Accept
+          </button>
+        </div>
+
+        <input
+          [(ngModel)]="rc_reason"
+          type="text"
+          placeholder="Reason for Reject"
+          class="input"
+        />
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Samurai DL">
+    <div class="info-table">
+      <ul class="user-details">
+        <li *ngFor="let detail of dlData" class="detail">
+          <p class="text-header">{{ detail.label }}</p>
+          <p class="text-content">{{ detail.value }}</p>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <div class="d-flex col-md-6">
+          <div>
+            <span class="text-header">DL - FRONT</span>
+
+            <div class="bg-doc m-1">
+              <img
+                (click)="openImageDialog(dlFront)"
+                *ngIf="dlFront"
+                [src]="dlFront"
+                alt="Description"
+                class="bg-image"
+              />
+
+              <div *ngIf="!dlFront" class="img-empty">
+                <!-- Content for the empty state -->
+                <p class="img-empty">No Document uploaded</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <span class="text-header">DL - BACK</span>
+          <div class="bg-doc m-1">
+            <img
+              (click)="openImageDialog(dlBack)"
+              *ngIf="dlBack"
+              [src]="dlBack"
+              alt="Description"
+              class="bg-image"
+            />
+
+            <div *ngIf="!dlBack" class="img-empty">
+              <!-- Content for the empty state -->
+              <p class="img-empty">No Document uploaded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="licenceInfo">
+      <div *ngIf="licenceInfo?.document_status === 0">
+        <div class="line"></div>
+        <div class="actions">
+          <button
+            class="btn reject"
+            (click)="updateDocStatus(licenceInfo.document_id,0,dl_reason)"
+          >
+            Reject
+          </button>
+          <button
+            class="btn accept"
+            (click)="updateDocStatus(licenceInfo.document_id,1,dl_reason)"
+          >
+            Accept
+          </button>
+        </div>
+
+        <input
+          [(ngModel)]="dl_reason"
+          type="text"
+          placeholder="Reason for Reject"
+          class="input"
+        />
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Samurai Documents">
+    <div class="info-table">
+      <ul class="user-details">
+        <li *ngFor="let detail of docData" class="detail">
+          <p class="text-header">{{ detail.label }}</p>
+          <p class="text-content">{{ detail.value }}</p>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <div class="d-flex col-md-6">
+          <div>
+            <span class="text-header">DOCUMENT - FRONT</span>
+
+            <div class="bg-doc m-1">
+              <img
+                (click)="openImageDialog(idFront)"
+                *ngIf="idFront"
+                [src]="idFront"
+                alt="Description"
+                class="bg-image"
+              />
+
+              <div *ngIf="!idFront" class="img-empty">
+                <!-- Content for the empty state -->
+                <p class="img-empty">No Document uploaded</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <span class="text-header">DOCUMENT - BACK</span>
+          <div class="bg-doc m-1">
+            <img
+              (click)="openImageDialog(idBack)"
+              *ngIf="idBack"
+              [src]="idBack"
+              alt="Description"
+              class="bg-image"
+            />
+
+            <div *ngIf="!idBack" class="img-empty">
+              <!-- Content for the empty state -->
+              <p class="img-empty">No Document uploaded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="identityInfo">
+      <div *ngIf="identityInfo?.document_status === 0">
+        <div class="line"></div>
+        <div class="actions">
+          <button
+            class="btn reject"
+            (click)="updateDocStatus(identityInfo.document_id,0,dl_reason)"
+          >
+            Reject
+          </button>
+          <button
+            class="btn accept"
+            (click)="updateDocStatus(identityInfo.document_id,1,dl_reason)"
+          >
+            Accept
+          </button>
+        </div>
+
+        <input
+          [(ngModel)]="doc_reason"
+          type="text"
+          placeholder="Reason for Reject"
+          class="input"
+        />
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+</ng-template>

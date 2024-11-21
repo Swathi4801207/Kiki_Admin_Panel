@@ -1,0 +1,80 @@
+.item-header {
+  height: 55px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list-header {
+  padding: 15px;
+  font-family: "font-semi-bold";
+  width: 100%;
+}
+
+.application-list {
+  overflow-y: auto;
+}
+
+.application-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.application-item:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Hover effect */
+}
+
+.application-item.selected {
+  color: #007bff; /* Change text color for selected item */
+  font-weight: bold; /* Optional: make it bold */
+}
+
+.app-name {
+  flex: 1;
+  font-size: 14px;
+  font-family: "font-medium";
+  margin-left: 12px;
+  margin-right: 12px;
+  color: black;
+  transition: color 0.3s;
+}
+
+.app-time {
+  font-size: 12px;
+  color: black;
+  font-family: "font-medium";
+  margin-right: 30px;
+  transition: color 0.3s;
+}
+
+.selected-text {
+  color: #007bff; /* Change to your desired color */
+  font-weight: bold; /* Optional: make it bold */
+  font-family: "font-bold";
+}
+.app-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.circular-image {
+  width: 35px; /* Set the desired width */
+  height: 35px; /* Set the desired height */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Scale the image to fit the container */
+  border: 1px solid #ddd; /* Optional: Add a border */
+}
+
+.line {
+  height: 1px;
+  background: #e0e0e0;
+  background-color: #e0e0e0;
+}
+
+.header-title{
+  font-size: 16px;
+  font-family: 'font-semi-bold';
+  color: black;
+}

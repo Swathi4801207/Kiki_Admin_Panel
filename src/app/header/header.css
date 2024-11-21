@@ -1,0 +1,405 @@
+.header_img {
+    width: 160px;
+    height: 45px;
+   
+  }
+  .icons-container i {
+    font-size: 20px;
+    padding: 15px;
+  }
+  .mat-toolbar.d-flex.align-items-center.mat-toolbar-single-row {
+    background-color: #00008a !important;
+    color: #fff;
+  }
+
+  .toolbar-parent[_ngcontent-ng-c3773923226] {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    justify-content: space-between;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 1039;
+    top: 0px;
+    align-items: center;
+    background-color: #00008a;
+  }
+  .action-icons i {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-image {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  
+  .header-image:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  .app-title {
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: "font-regular";
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.05cap;
+  }
+  .vertical-line {
+    width: 2px;
+    margin-left: 40px;
+    height: 30px;
+    background-color: #ccc;
+  }
+  
+  .header-type-image {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+  }
+  
+  .header-type-text {
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: "font-bold";
+    letter-spacing: 0.05cap;
+    color: #000;
+    align-items: center;
+    text-align: center;
+  }
+  .icons-parent {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .icons-container {
+    width: 100%;
+    align-items: end;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .add-icon {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border-color: #0176ff;
+    background-color: #0176ff;
+  }
+  .add-icon:hover {
+    background-color: #135eb4;
+    width: 33px;
+    height: 33px;
+  }
+  
+  .add-icon-img {
+    align-items: center;
+  }
+  
+  .end-images {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    fill: #000;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .user-profile img {
+    width: 32px; /* Adjust size as needed */
+    height: 32px;
+    border-radius: 50%; /* Circular profile picture */
+  
+   
+  }
+ 
+  
+  
+  .fsb {
+    font-family: "font-semi-bold", sans-serif, "Courier New", Courier, monospace;
+  }
+  
+  .fm {
+    font-family: "font-medium", sans-serif, "Courier New", Courier, monospace;
+  }
+  
+  .fb {
+    font-family: "font-bold", sans-serif, "Courier New", Courier, monospace;
+  }
+  
+  .fr {
+    font-family: "font-regular", sans-serif, "Courier New", Courier, monospace;
+  }
+  
+  .cp {
+    cursor: pointer;
+  }
+  
+  .pd {
+    padding-left: 6px;
+    flex: end;
+  }
+  
+  .FS {
+    font-size: 13px;
+  }
+  
+  .tsm {
+    font-size: 16px;
+    margin: 10px;
+    color: #fff !important;
+  }
+  
+  .tb {
+    font-size: 20px;
+  }
+  
+  .fp {
+    text-align: right;
+  }
+  
+  
+  .menu-button {
+    position: relative;
+    top: 10px;
+  }
+  
+  .custom-menu {
+    background-color: white;
+    width: 500px;
+  }
+  
+  .menu-section {
+    padding: 4px 4px;
+  }
+  
+  .menu-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 8px;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .menu-item {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: flex-start;
+    padding-left: 4px;
+    background: none;
+  }
+  
+  .menu-item:hover{
+    background-color: none;
+    background: none;
+    color: #0176ff;
+  }
+  
+  .menu-item mat-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  .mat-divider {
+    margin: 0;
+  }
+  
+  .menu-icon{
+    margin: 0;
+    fill: #0176ff;
+    font-weight: 100;
+    color: #0176ff;
+    font-size: 18px; 
+   
+  }
+  
+  .divider{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .menu-title{
+    font-size: 12px;
+    font-family: 'font-regular';
+    text-decoration: none;
+    background: none;
+  }
+  
+  .no-underline {
+    text-decoration: none;
+  }
+  .menu-link {
+    text-decoration: none;
+    color: inherit; 
+  }
+  .menu-title-header{
+    font-size: 13px;
+    color: #0176ff;
+    font-family: 'font-semi-bold';
+  }
+  
+  .profile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .profile-info {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-name {
+    font-family: 'font-medium';
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .profile-email,
+  .profile-role {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .mobile-apps {
+    padding: 16px;
+  }
+  
+  .app-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  
+  .app-links a {
+    display: inline-block;
+    width: 48%;
+  }
+  
+  .app-links img {
+    width: 100%;
+  }
+  
+  mat-menu {
+    padding: 0;
+  }
+  
+  mat-divider {
+    margin: 0;
+  }
+  
+  .profile_parent{
+    width: 300px;
+  }
+  
+  .profile_pic {
+    width: 40px;
+    height: 40px;
+    border-color: #06b3d5;
+    border-radius: 70%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app_logo{
+  
+    width: 40px;
+    height: 40px;
+  }  
+
+  .nav-item i {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #00008a !important;
+  }
+  .nav-item {
+    margin-top: 5px;
+  }
+  .header-type-image {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+  }
+  .cp.header_img {
+    width: 95%;
+  }
+  .fb.tsm.ml-2 {
+    margin: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .custom-menu {
+    background-color: white;
+    width: 500px;
+  }
+  .user-name.fb {
+    background-color: #fff !important;
+   
+    border-radius: 50%;
+    font-size: 12px;
+  }
+  #actions {
+    display: none;
+  }

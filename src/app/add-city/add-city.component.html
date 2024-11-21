@@ -1,0 +1,167 @@
+<!--   
+              <form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+                
+              <div>
+                <div class="d-flex col-md-12">
+                  <div class="form-group col-md-6 m-1">
+                    <label class="mt-1 fm FS" for="city_name"
+                      >City Name*</label
+                    >
+                    <input
+                      class="form-control fm"
+                      placeholder="Enter City Name..."
+                      formControlName="city_name"
+                      [(ngModel)]="city_name"
+                    />
+                  </div>
+  
+                  <div class="form-group col-md-6 m-1">
+                    <label class="mt-1 fm FS" for="city_code"
+                      >City Code*</label
+                    >
+                    <input
+                      class="form-control fm"
+                      placeholder="City Code..."
+                      [(ngModel)]="city_code"
+                      formControlName="city_code"
+                    />
+                  </div>
+                </div>
+  
+                <div class="d-flex col-md-12">
+                    <div class="form-group col-md-6 m-1">
+                      <label class="mt-1 fm FS" for="state">State*</label>
+                      <div class="dropdown-wrapper">
+                      <select
+                        class="form-control fm"
+                        id="state"
+                        [(ngModel)]="selectedState"
+                        formControlName="state"
+                      >
+                        <option value=""  selected>Select State</option>
+                        <option *ngFor="let state of states" [value]="state">
+                          {{ state }}
+                        </option>
+                      </select>
+                      <span class="dropdown-icon">▼</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+  
+                  <div class="form-group col-md-6 m-1">
+                    <label class="mt-1 fm FS" for="radius_km"
+                      >Radius In KM*</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control fm"
+                      placeholder="Enter Radius..."
+                      maxlength="1"
+                      formControlName="radius_km"
+                    />
+                  </div>
+                </div>
+  
+                <div class="end-view">
+                  <button class="btn font-sb" type="submit">Add</button>
+                </div>
+             
+              
+            </form> -->
+           
+            <div class="parent">
+                <app-header [pageTitle]="dashboardTitle" [additionalData]="someData"></app-header>
+                <app-nav-bar></app-nav-bar>
+              
+                <main class="main" id="main">
+                  <div class="container-fluid">
+                    <div class="content">
+                      <div class="row justify-content-center my-5">
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                          <div class="card shadow">
+                            <div class="card-body">
+                              <h4 class="card-title text-center mb-4">Add City Details Form</h4>
+                              <form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+                                <!-- City Name -->
+            <div class="mb-3">
+                <label for="city_name" class="form-label">City Name *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city_name"
+                  placeholder="Enter City Name"
+                  formControlName="city_name"
+                  required
+                />
+              </div>
+  
+              <!-- City Code -->
+              <div class="mb-3">
+                <label for="city_code" class="form-label">City Code *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city_code"
+                  placeholder="Enter City Code"
+                  formControlName="city_code"
+                  required
+                />
+              </div>
+  
+              <!-- State Dropdown -->
+              
+   <div class="mb-3">
+                
+                    <label for="state" class="form-label">Select State *</label>
+                    <mat-form-field appearance="fill" class="w-100">
+                      <mat-label>State</mat-label>
+                      <mat-select formControlName="state" [(ngModel)]="state">
+                        <mat-option *ngFor="let state of states" [value]="state">
+                          {{ state }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div> 
+              <!-- Radius in KM -->
+              <div class="mb-3">
+                <label for="radius_km" class="form-label">Radius (in KM) *</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="radius_km"
+                  placeholder="Enter Radius"
+                  formControlName="radius_km"
+                  required
+                />
+              </div>
+  
+              <!-- Active/Inactive Radio Buttons -->
+              <div class="mb-3">
+                <label for="status" class="form-label">Status *</label>
+                <div class="d-flex gap-3">
+                  <mat-radiogroup formControlName="status" [(ngModel)]="status">
+                    <mat-radio-button value="active">Active</mat-radio-button>
+                    <mat-radio-button value="in active">In Active</mat-radio-button>
+                    
+                  
+                  </mat-radiogroup>
+                </div>
+              </div>
+  
+              <!-- Save Button -->
+              <div class="d-flex justify-content-center mt-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+  
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+              
+            

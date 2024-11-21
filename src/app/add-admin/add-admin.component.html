@@ -1,0 +1,106 @@
+<div class="parent">
+  <app-header [pageTitle]="dashboardTitle" [additionalData]="someData"></app-header>
+  <app-nav-bar></app-nav-bar>
+
+  <main class="main" id="main">
+    <div class="container-fluid">
+      <div class="content">
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow">
+              <div class="card-body">
+                <h4 class="card-title text-center mb-4">Add Admin</h4>
+                <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+                  <!-- Full Name -->
+                  <div class="mb-0">
+                    <label for="fullName" class="form-label">Full Name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      formControlName="fullName"
+                      [(ngModel)]="full_name"
+                      placeholder="Enter full name"
+                      required
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-0">
+                    <label for="email" class="form-label">Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      formControlName="email"
+                      [(ngModel)]="email"
+                      placeholder="Enter email"
+                      required
+                    />
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="mb-0">
+                    <label for="phone" class="form-label">Phone *</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      formControlName="phone"
+                      [(ngModel)]="phone"
+                      placeholder="Enter phone number"
+                      pattern="[0-9]{10}"
+                      required
+                    />
+                  </div>
+
+                  <!-- Gender -->
+                  <div class="mb-0">
+                    <label for="gender" class="form-label">Gender *</label>
+                    <div class="d-flex gap-3">
+                      <mat-radiogroup formControlName="gender" [(ngModel)]="gender">
+                        <mat-radio-button value="male">Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                        <mat-radio-button value="other">Other</mat-radio-button>
+                      
+                      </mat-radiogroup>
+                    </div>
+                  </div>
+
+                  <!-- Date of Birth -->
+                  <div class="mb-0">
+                    <label for="dob" class="form-label">Date of Birth *</label>
+                    <mat-form-field appearance="fill" class="w-100">
+                      <mat-label>Date of Birth</mat-label>
+                      <input matInput [matDatepicker]="picker" formControlName="dob" [(ngModel)]="dob" />
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+
+                  <!-- Employee Selection -->
+                  <div class="mb-0">
+                    <label for="employee" class="form-label">Select Employee *</label>
+                    <mat-form-field appearance="fill" class="w-100">
+                      <mat-label>Employee</mat-label>
+                      <mat-select formControlName="employee" [(ngModel)]="employee">
+                        <mat-option *ngFor="let emp of employees" [value]="emp.id">
+                          {{ emp.name }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="d-flex justify-content-center mt-3">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
